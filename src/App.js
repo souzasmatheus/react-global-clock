@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
 import Clock from './presentation/clock'
-import SearchForm from './presentation/search'
+import Menu from './presentation/menu'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchForm />
+        <Menu />
         <Clock />
       </div>
     );
