@@ -7,8 +7,8 @@ import About from '../presentation/about'
 const Routes = () => (
     <HashRouter>
         <Switch>
-            <Route exact path="/" component={Clock}/>
-            <Route path="/about" component={About} />
+            <Route exact path="/" render={() => <Clock />}/>
+            <Route path="/about" render={() => <About />} />
         </ Switch>
     </HashRouter>
 )
