@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Clock />
-        <Button styles="success">SEND</Button>
+        <Button styles="success" type="submit">SEND</Button>
       </div>
     );
   }
