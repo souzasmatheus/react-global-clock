@@ -1,7 +1,12 @@
 body {
-  background-color: #282c34;
+  background-color: #282c34 !important;
 }
 
 .App {
   text-align: center;
+}
+
+span {
+  color: white;
+  font-size: 30px;
 }
