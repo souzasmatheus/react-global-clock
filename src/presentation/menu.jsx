@@ -3,10 +3,10 @@ import SearchForm from './search'
 
 const Menu = ({onSearch=f=>f}) => (
     <nav className="navbar navbar-light bg-light">
-        <a href="#" className="navbar-brand">Global Clock</a>
+        <a href="/home" className="navbar-brand">Global Clock</a>
 
         <div className="ml-auto">
-            <SearchForm></SearchForm>
+            <SearchForm />
         </div>
     </nav>
 )
