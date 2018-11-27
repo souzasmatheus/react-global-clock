@@ -1,12 +1,14 @@
 import React from 'react'
-import {Router, Route, Redirect, hashHistory} from 'react-router'
+import {Switch, Route, HashRouter} from 'react-router-dom'
 
 import Clock from '../presentation/clock'
 
-const Router = () => (
-    <Router history={hashHistory}>
-        <Route path="/home" component={Clock}/>
-        <Route path="/about" component={About}/>
-        <Redirect from="*" to="/home" />
-    </Router>
+const Routes = () => (
+    <HashRouter>
+        <Switch>
+            <Route exact path="/" component={Clock}/>
+        </ Switch>
+    </HashRouter>
 )
+
+export default Routes

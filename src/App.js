@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Clock from './presentation/clock'
+import Routes from './route/routes'
 import Menu from './presentation/menu'
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Menu />
-        <Clock />
+        <Routes />
       </div>
     );
   }
