@@ -17,7 +17,7 @@ const Menu = ({onSearch=f=>f}) => (
             
 
             <div className="ml-auto">
-                <SearchForm />
+                <SearchForm onSearch={onSearch}/>
             </div>
         </div>
         
