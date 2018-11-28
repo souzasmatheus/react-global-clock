@@ -1,5 +1,6 @@
 import React from 'react'
 import SearchForm from './search'
+import PropTypes from 'prop-types'
 
 const Menu = ({onSearch=f=>f}) => (
     <nav className="navbar navbar-light bg-light">
@@ -23,5 +24,9 @@ const Menu = ({onSearch=f=>f}) => (
         
     </nav>
 )
+
+Menu.propTypes = {
+    onSearch: PropTypes.func
+}
 
 export default Menu
