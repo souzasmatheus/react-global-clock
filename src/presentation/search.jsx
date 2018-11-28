@@ -32,4 +32,8 @@ SearchForm.propTypes = {
     onSearch: PropTypes.func
 }
 
+SearchForm.defaultProps = {
+    onSearch: f=>f
+}
+
 export default SearchForm

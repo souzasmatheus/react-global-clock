@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({styles, children, type}) => (
+const Button = ({styles='success', children='BTN', type='button'}) => (
     <button className={'btn btn-' + styles} type={type}>
         {children}
     </button>
