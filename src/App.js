@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Routes from './route/routes'
-import Menu from './presentation/menu'
+import Menu from './templates/menu'
 
 class App extends Component {
   constructor() {

@@ -1,8 +1,8 @@
 import React from 'react'
 import {Switch, Route, HashRouter} from 'react-router-dom'
 
-import Clock from '../presentation/clock'
-import About from '../presentation/about'
+import Clock from '../templates/clock'
+import About from '../templates/about'
 
 const Routes = () => (
     <HashRouter>
