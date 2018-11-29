@@ -6,8 +6,17 @@ body {
   text-align: center;
 }
 
+.clockBorder {
+  background-color: rgb(153, 152, 152);
+  border-radius: 6px;
+}
+
+.clockDisplay {
+  background-color: #9FAE87;
+}
+
 span {
-  color: white;
+  color: #000000;
   font-size: 30px;
   
 }

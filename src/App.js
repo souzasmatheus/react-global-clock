@@ -75,8 +75,12 @@ class App extends Component {
     return (
       <div className="App">
         <Menu onSearch={this.getCityTime}/>
-        <Routes hour={this.state.hour}
-        minute={this.state.minute}/>
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <Routes hour={this.state.hour}
+            minute={this.state.minute}/>
+          </div>
+        </div>        
       </div>
     );
   }
