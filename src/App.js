@@ -33,6 +33,10 @@ class App extends Component {
     }, 60000)
   }
 
+  componentWillUnmount() {
+    clearInterval(this.countSeconds)
+  }
+
   handleResponse(res) {
     const timeWithDate = res.data.time_zone[0].localtime
     const time = timeWithDate.split(' ')[1]
