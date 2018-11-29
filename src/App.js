@@ -9,7 +9,6 @@ class App extends Component {
     this.state = {
       hour: '00',
       minute: '00',
-      second: '',
       ampm: ''
     }
 
