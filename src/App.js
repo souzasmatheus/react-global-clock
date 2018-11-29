@@ -14,6 +14,22 @@ class App extends Component {
 
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
+    this.checkSeconds = this.checkSeconds.bind(this)
+  }
+
+  checkSeconds() {
+    if (this.second === 60) {
+      this.setState({...this.state, minute: this.state.minute + 1})
+      this.second = 0
+    }
+  }
+
+  componentDidUpdate() {
+    this.second = 0
+    this.countSeconds = setInterval(() => {
+      this.checkSeconds()
+      this.second = this.second + 1
+    }, 1000)
   }
 
   handleResponse(res) {
@@ -23,8 +39,8 @@ class App extends Component {
     const minute = time.split(':')[1]
     this.setState({
       ...this.state,
-      hour,
-      minute
+      hour: Number(hour),
+      minute: Number(minute)
     })
   }
 
