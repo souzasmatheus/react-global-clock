@@ -7,11 +7,26 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      hour: '',
+      minute: '',
+      second: '',
+      ampm: ''
     }
 
-    //this.returnTime = this.returnTime.bind(this)
     this.getCityTime = this.getCityTime.bind(this)
+    this.handleResponse = this.handleResponse.bind(this)
+  }
+
+  handleResponse(res) {
+    const timeWithDate = res.data.time_zone[0].localtime
+    const time = timeWithDate.split(' ')[1]
+    const hour = time.split(':')[0]
+    const minute = time.split(':')[1]
+    this.setState({
+      ...this.state,
+      hour,
+      minute
+    })
   }
 
   getCityTime(city) { 
@@ -27,7 +42,9 @@ class App extends Component {
       request.send()
     })
     .then(
-      res => console.log(res.data.time_zone[0].localtime),
+      res => {
+        this.handleResponse(res)
+      },
       err => console.error(
         new Error("didn't work")
       )
