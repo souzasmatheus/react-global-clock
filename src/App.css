@@ -1,3 +1,10 @@
+@font-face {
+  font-family: digitalFont;
+  src: local("digital"),
+       url(font/digital-7.ttf);
+  font-weight: 400;
+}
+
 body {
   background-color: #282c34 !important;
 }
@@ -13,12 +20,14 @@ body {
 
 .clockDisplay {
   background-color: #9FAE87;
+  border-style: dotted;
 }
 
 span {
   color: #000000;
   font-size: 30px;
-  
+  font-family: digitalFont;
+  font-size: 35px;
 }
 
 .about {
