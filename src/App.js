@@ -7,8 +7,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      hour: '',
-      minute: '',
+      hour: '00',
+      minute: '00',
       second: '',
       ampm: ''
     }
@@ -55,7 +55,8 @@ class App extends Component {
     return (
       <div className="App">
         <Menu onSearch={this.getCityTime}/>
-        <Routes />
+        <Routes hour={this.state.hour}
+        minute={this.state.minute}/>
       </div>
     );
   }
