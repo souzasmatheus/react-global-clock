@@ -7,8 +7,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      hour: '00',
-      minute: '00',
+      hour: 0,
+      minute: 0,
       ampm: ''
     }
 
