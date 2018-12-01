@@ -9,11 +9,12 @@ class App extends Component {
     this.state = {
       hour: 0,
       minute: 0,
-      ampm: ''
+      ampm: '24'
     }
 
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
+    this.handleToggle = this.handleToggle.bind(this)
   }
 
   componentDidUpdate() {
@@ -64,6 +65,11 @@ class App extends Component {
     )
   }
 
+  handleToggle() {
+    
+    console.log(this.state.ampm)
+  }
+
   render() {
     return (
       <div className="App">
@@ -71,7 +77,8 @@ class App extends Component {
         <div className="container mt-5">
           <div className="row justify-content-center">
             <Routes hour={this.state.hour}
-            minute={this.state.minute}/>
+            minute={this.state.minute}
+            onToggle={this.handleToggle}/>
           </div>
         </div>        
       </div>

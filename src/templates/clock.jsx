@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ToggleButton from './toggleButton'
 
-const Clock = ({hour=0, minute=0, ampm=' '}) => (
+const Clock = ({hour=0, minute=0, ampm=' ', onToggle=f=>f}) => (
 
     <div className="col-6 col-md-4">
         <div className="clockBorder p-3">
@@ -14,7 +14,7 @@ const Clock = ({hour=0, minute=0, ampm=' '}) => (
             </div>            
         </div>
         <div className="mt-2">
-            <ToggleButton></ToggleButton>
+            <ToggleButton onToggle={onToggle}/>
         </div>
     </div>
     

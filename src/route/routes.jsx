@@ -4,10 +4,10 @@ import {Switch, Route, HashRouter} from 'react-router-dom'
 import Clock from '../templates/clock'
 import About from '../templates/about'
 
-const Routes = (props) => (
+const Routes = ({hour, minute, onToggle}) => (
     <HashRouter>
         <Switch>
-            <Route exact path="/" render={() => <Clock hour={props.hour} minute={props.minute}/>}/>
+            <Route exact path="/" render={() => <Clock hour={hour} minute={minute}onToggle={onToggle}/>}/>
             <Route path="/about" render={() => <About />} />
         </ Switch>
     </HashRouter>
