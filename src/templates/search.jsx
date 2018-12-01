@@ -10,12 +10,16 @@ const SearchForm = ({onSearch=f=>f}) => {
     }
 
     return (
-        <form className="form-inline search-form" onSubmit={submit}>
-            <div className="form-group mr-2">
-                <input type="text" className="form-control" 
-                ref={input => _cityName = input} placeholder="Type a city name..."/>
+        <form onSubmit={submit}>
+            <div className="form-row">
+                <div className="col-8">
+                    <input type="text" className="form-control" 
+                    ref={input => _cityName = input} placeholder="Type a city name..."/>
+                </div>
+                <div className="col">
+                    <Button styles="success form-control" type="submit">SEARCH</Button>
+                </div>
             </div>
-            <Button styles="success" type="submit">SEARCH</Button>
         </form>
     )
 }

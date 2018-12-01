@@ -7,7 +7,7 @@ const Menu = ({onSearch=f=>f}) => (
         <div className="container">
             <a href="/home" className="navbar-brand">Global Clock</a>
 
-            <ul className="navbar-nav flex-row">
+            <ul className="navbar-nav flex-row mr-md-auto">
                 <li className="nav-item mr-2">
                     <a className="nav-link" href="/">Home</a>
                 </li>
@@ -17,7 +17,7 @@ const Menu = ({onSearch=f=>f}) => (
             </ul>
             
 
-            <div className="ml-auto">
+            <div className="mx-auto mx-md-0">
                 <SearchForm onSearch={onSearch}/>
             </div>
         </div>
