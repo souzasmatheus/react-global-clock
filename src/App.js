@@ -14,14 +14,7 @@ class App extends Component {
 
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
-    //this.checkSeconds = this.checkSeconds.bind(this)
   }
-
-  /*checkSeconds() {
-    if (this.second === 60) {
-      this.setState({...this.state, minute: this.state.minute + 1})
-    }
-  }*/
 
   componentDidUpdate() {
     const updatedMinute = this.state.minute + 1
