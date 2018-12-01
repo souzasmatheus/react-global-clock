@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ToggleButton from './toggleButton'
 
 const Clock = ({hour=0, minute=0, ampm=' '}) => (
 
@@ -11,6 +12,9 @@ const Clock = ({hour=0, minute=0, ampm=' '}) => (
                 <span> </span>
                 <span>{ampm}</span>
             </div>            
+        </div>
+        <div className="mt-2">
+            <ToggleButton></ToggleButton>
         </div>
     </div>
     
