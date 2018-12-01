@@ -66,8 +66,11 @@ class App extends Component {
   }
 
   handleToggle() {
-    
-    console.log(this.state.ampm)
+    if (this.state.ampm === '24') {
+      this.setState({...this.state, ampm: '12'})
+    } else if (this.state.ampm === '12') {
+      this.setState({...this.state, ampm: '24'})
+    }
   }
 
   render() {
@@ -78,6 +81,7 @@ class App extends Component {
           <div className="row justify-content-center">
             <Routes hour={this.state.hour}
             minute={this.state.minute}
+            ampm={this.state.ampm}
             onToggle={this.handleToggle}/>
           </div>
         </div>        
