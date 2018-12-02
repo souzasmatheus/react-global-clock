@@ -18,17 +18,12 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    const updatedMinute = this.state.minute + 1
-    const updatedHour = this.state.hour + 1
-    this.countSeconds = setInterval(() => {
-      (this.state.minute < 60) ?
-        this.setState({...this.state, minute: updatedMinute}) :
-        this.setState({...this.state, hour: updatedHour, minute: 0})
+    let minutes = 0
+    const counter = setInterval(() => {
+      minutes = minutes + 1
+      let minute = this.state.minute + minutes
+      this.setState({...this.state, minute })
     }, 60000)
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.countSeconds)
   }
 
   handleResponse(res) {
