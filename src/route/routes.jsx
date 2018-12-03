@@ -7,7 +7,8 @@ import About from '../templates/about'
 const Routes = ({hour, minute, ampm, onToggle}) => (
     <HashRouter>
         <Switch>
-            <Route exact path="/" render={() => <Clock hour={hour} minute={minute} ampm={ampm} onToggle={onToggle}/>}/>
+            <Route exact path="/" render={() => <Clock hour={hour} minute={minute} 
+            ampm={ampm} onToggle={onToggle}/>}/>
             <Route path="/about" render={() => <About />} />
         </ Switch>
     </HashRouter>
