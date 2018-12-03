@@ -5,27 +5,20 @@ import ToggleButton from './toggleButton'
 class Clock extends Component{
     constructor(props) {
         super(props)
-
-        this.updateSeconds = this.updateSeconds.bind(this)
+        
+        this.state = {
+            hour: 0,
+            minute: 0,
+            ampm: '24'
+        }
     }
 
-    updateSeconds() {
-        this.counter = setInterval(() => {
-            this.seconds = this.seconds + 1
-            console.log(this.seconds)
-        }, 1000)
-    }
-
-    componentDidMount() {
-        this.seconds = 0
-    }
-
-    componentWillReceiveProps() {
-        this.updateSeconds()
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.counter)
+    componentWillReceiveProps(nextProps) {
+        this.setState((state, props) => ({
+            hour: nextProps.hour,
+            minute: nextProps.minute + props.increment,
+            ampm: nextProps.ampm
+        }))
     }
 
     render() {
@@ -33,20 +26,20 @@ class Clock extends Component{
         <div className="col-6 col-md-4">
             <div className="clockBorder p-3">
                 <div className="clockDisplay">
-                    <span>{(this.props.ampm === '24') ?
-                                (this.props.hour > 9) ? 
-                                this.props.hour : '0' + this.props.hour :
-                                (this.props.hour < 10) ? 
-                                    '0' + this.props.hour :
-                                (this.props.hour < 13) ?
-                                this.props.hour :
-                                (this.props.hour === 24) ?
-                                    '00' : this.props.hour - 12 }:</span>
-                    <span>{(this.props.minute > 9) ? this.props.minute : '0' + this.props.minute}</span>
+                    <span>{(this.state.ampm === '24') ?
+                                (this.state.hour > 9) ? 
+                                this.state.hour : '0' + this.state.hour :
+                                (this.state.hour < 10) ? 
+                                    '0' + this.state.hour :
+                                (this.state.hour < 13) ?
+                                this.state.hour :
+                                (this.state.hour === 24) ?
+                                    '00' : this.state.hour - 12 }:</span>
+                    <span>{(this.state.minute > 9) ? this.state.minute : '0' + this.state.minute}</span>
                     <span> </span>
-                    <span>{(this.props.ampm === '24') ?
+                    <span>{(this.state.ampm === '24') ?
                                 '' :
-                                (this.props.hour < 13) ?
+                                (this.state.hour < 13) ?
                                     'AM' : 'PM'}</span>
                 </div>            
             </div>

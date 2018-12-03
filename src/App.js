@@ -9,55 +9,34 @@ class App extends Component {
     this.state = {
       hour: 0,
       minute: 0,
-      ampm: '24'
+      ampm: '24',
+      increment: 0
     }
 
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
     this.handleToggle = this.handleToggle.bind(this)
-    /*this.checkSeconds = this.checkSeconds.bind(this)
-    this.incrementSeconds = this.incrementSeconds.bind(this)
-    this.chamou = this.chamou.bind(this)
-    this.handleMinuteChange = this.handleMinuteChange.bind(this)*/
-  }
-
-  /*chamou() {
-    console.log('CHAMOU COMPONENTWILLUPDATE')
-  }
-
-  incrementSeconds() {
-    this.seconds = this.seconds + 1
-  }
-
-  handleMinuteChange() {
-    const timePassed = this.seconds / 60
-    this.setState((state, props) => ({
-      ...this.state, minute: state.minute + timePassed
-    }))
+    this.checkSeconds = this.checkSeconds.bind(this)
   }
 
   checkSeconds() {
     if (this.seconds % 60 === 0) {
-      this.handleMinuteChange()
+      const increment = this.seconds / 60
+      clearInterval(this.counter)
+      this.setState({...this.state, increment})
     }
   }
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     this.counter = setInterval(() => {
-      this.incrementSeconds()
+      this.seconds = this.seconds + 1
       this.checkSeconds()
-      
     }, 1000)
-    this.chamou()
   }
 
-  componentWillMount() {
-   this.seconds = 0 
+  componentDidMount() {
+    this.seconds = 0
   }
-
-  componentWillUnmount() {
-    clearInterval(this.counter)
-  }*/
 
   handleResponse(res) {
     const timeWithDate = res.data.time_zone[0].localtime
@@ -110,6 +89,7 @@ class App extends Component {
             <Routes hour={this.state.hour}
             minute={this.state.minute}
             ampm={this.state.ampm}
+            increment={this.state.increment}
             onToggle={this.handleToggle}/>
           </div>
         </div>        
