@@ -15,6 +15,7 @@ class App extends Component {
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
     this.checkSeconds = this.checkSeconds.bind(this)
+    this.resetLastSearch = this.resetLastSearch.bind(this)
   }
 
   checkSeconds() {
@@ -59,6 +60,7 @@ class App extends Component {
 
   componentDidMount() {
     this.seconds = 0
+    this.searchClicks = 0
   }
 
   handleResponse(res) {
@@ -69,11 +71,12 @@ class App extends Component {
     this.setState({
       ...this.state,
       hour: Number(hour),
-      minute: Number(minute)
+      minute: Number(minute),
+      increment: 0
     })
   }
 
-  getCityTime(city) { 
+  getCityTime(city) {
     new Promise((resolves, rejects) => {
       const api = `https://api.worldweatheronline.com/premium/v1/tz.ashx?key=6bdee2019bc74d3bb34145746182611&q=${city}&format=json`
       const request = new XMLHttpRequest()
@@ -95,10 +98,20 @@ class App extends Component {
     )
   }
 
+  resetLastSearch(city) {
+    this.searchClicks ++
+    if (this.searchClicks > 0) {
+      this.searchClicks = 0
+      clearInterval(this.counter)
+      this.seconds = 0
+      this.getCityTime(city)
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <Menu onSearch={this.getCityTime}/>
+        <Menu onSearch={this.resetLastSearch}/>
         <div className="container mt-5">
           <div className="row justify-content-center">
             <Routes hour={this.state.hour}
