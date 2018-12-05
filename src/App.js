@@ -20,10 +20,35 @@ class App extends Component {
   }
 
   checkSeconds() {
-    if (this.seconds % 60 === 0) {
+    const minuteSum = this.state.minute + this.state.increment
+    const currentHour = this.state.hour
+    if (this.seconds % 60 === 0 && minuteSum < 59) {
       const increment = this.seconds / 60
       clearInterval(this.counter)
       this.setState({...this.state, increment})
+    } else if (this.seconds % 60 === 0 && minuteSum === 59 && currentHour === 23) {
+      this.seconds = 0
+      const hour = 0
+      const minute = 0
+      const increment = 0
+      clearInterval(this.counter)
+      this.setState((state, props) => ({
+        ...this.state,
+        hour,
+        minute,
+        increment
+      }))
+    } else if (this.seconds % 60 === 0 && minuteSum === 59) {
+      this.seconds = 0
+      const minute = 0
+      const increment = 0
+      clearInterval(this.counter)
+      this.setState((state, props) => ({
+        ...this.state,
+        hour: state.hour + 1,
+        minute,
+        increment
+      }))
     }
   }
 
@@ -43,10 +68,15 @@ class App extends Component {
     const time = timeWithDate.split(' ')[1]
     const hour = time.split(':')[0]
     const minute = time.split(':')[1]
-    this.setState({
+    /*this.setState({
       ...this.state,
       hour: Number(hour),
       minute: Number(minute)
+    })*/
+    this.setState({
+      ...this.state,
+      hour: 23,
+      minute: 58
     })
   }
 
