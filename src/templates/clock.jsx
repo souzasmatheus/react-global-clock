@@ -11,14 +11,23 @@ class Clock extends Component{
             minute: 0,
             ampm: '24'
         }
+
+        this.handleToggle = this.handleToggle.bind(this)
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState((state, props) => ({
             hour: nextProps.hour,
-            minute: nextProps.minute + props.increment,
-            ampm: nextProps.ampm
+            minute: nextProps.minute + props.increment
         }))
+    }
+
+    handleToggle() {
+        if (this.state.ampm === '24') {
+          this.setState({...this.state, ampm: '12'})
+        } else if (this.state.ampm === '12') {
+          this.setState({...this.state, ampm: '24'})
+        }
     }
 
     render() {
@@ -44,7 +53,7 @@ class Clock extends Component{
                 </div>            
             </div>
             <div className="mt-2">
-                <ToggleButton onToggle={this.props.onToggle}/>
+                <ToggleButton onToggle={this.handleToggle}/>
             </div>
         </div>
         )
@@ -53,8 +62,7 @@ class Clock extends Component{
 
 Clock.propTypes = {
     hour: PropTypes.number,
-    minute: PropTypes.number,
-    ampm: PropTypes.string
+    minute: PropTypes.number
 }
 
 export default Clock

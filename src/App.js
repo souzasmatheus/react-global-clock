@@ -9,13 +9,11 @@ class App extends Component {
     this.state = {
       hour: 0,
       minute: 0,
-      ampm: '24',
       increment: 0
     }
 
     this.getCityTime = this.getCityTime.bind(this)
     this.handleResponse = this.handleResponse.bind(this)
-    this.handleToggle = this.handleToggle.bind(this)
     this.checkSeconds = this.checkSeconds.bind(this)
   }
 
@@ -68,15 +66,10 @@ class App extends Component {
     const time = timeWithDate.split(' ')[1]
     const hour = time.split(':')[0]
     const minute = time.split(':')[1]
-    /*this.setState({
+    this.setState({
       ...this.state,
       hour: Number(hour),
       minute: Number(minute)
-    })*/
-    this.setState({
-      ...this.state,
-      hour: 23,
-      minute: 58
     })
   }
 
@@ -102,14 +95,6 @@ class App extends Component {
     )
   }
 
-  handleToggle() {
-    if (this.state.ampm === '24') {
-      this.setState({...this.state, ampm: '12'})
-    } else if (this.state.ampm === '12') {
-      this.setState({...this.state, ampm: '24'})
-    }
-  }
-
   render() {
     return (
       <div className="App">
@@ -118,9 +103,7 @@ class App extends Component {
           <div className="row justify-content-center">
             <Routes hour={this.state.hour}
             minute={this.state.minute}
-            ampm={this.state.ampm}
-            increment={this.state.increment}
-            onToggle={this.handleToggle}/>
+            increment={this.state.increment}/>
           </div>
         </div>        
       </div>
