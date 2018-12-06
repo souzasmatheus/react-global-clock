@@ -31,5 +31,13 @@ span {
 }
 
 .about {
-  color: white;
+  color: #F8F9FA;
+}
+
+.about h1 {
+  font-family: digitalFont;
+}
+
+.about p {
+  font-size: 140%;
 }
