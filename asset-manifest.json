@@ -1,7 +1,7 @@
 {
   "main.css": "/react-global-clock/static/css/main.d3273825.chunk.css",
-  "main.js": "/react-global-clock/static/js/main.c2e6ddb3.chunk.js",
-  "main.js.map": "/react-global-clock/static/js/main.c2e6ddb3.chunk.js.map",
+  "main.js": "/react-global-clock/static/js/main.337650f0.chunk.js",
+  "main.js.map": "/react-global-clock/static/js/main.337650f0.chunk.js.map",
   "static/css/1.6e5f1c6c.chunk.css": "/react-global-clock/static/css/1.6e5f1c6c.chunk.css",
   "static/js/1.eb3c132f.chunk.js": "/react-global-clock/static/js/1.eb3c132f.chunk.js",
   "static/js/1.eb3c132f.chunk.js.map": "/react-global-clock/static/js/1.eb3c132f.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/App.css": "/react-global-clock/static/media/digital-7.1e670d88.ttf",
   "static/css/main.d3273825.chunk.css.map": "/react-global-clock/static/css/main.d3273825.chunk.css.map",
   "index.html": "/react-global-clock/index.html",
-  "precache-manifest.956a3de7c6cbc74cdd1c171b3a9ab0ba.js": "/react-global-clock/precache-manifest.956a3de7c6cbc74cdd1c171b3a9ab0ba.js",
+  "precache-manifest.893a5b53b362bea10db586f38c3cceb8.js": "/react-global-clock/precache-manifest.893a5b53b362bea10db586f38c3cceb8.js",
   "service-worker.js": "/react-global-clock/service-worker.js"
 }
