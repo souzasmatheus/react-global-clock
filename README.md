@@ -5,7 +5,7 @@ It was created using `create-react-app`.
 
 ## Running it
 
-In order to run this project, you can either check out the live demo [here]() or:
+In order to run this project, you can either check out the live demo [here](https://souzasmatheus.github.io/react-global-clock/#/) or:
 1. Clone this repository;
 2. Move into its directory;
 3. Run npm install;
