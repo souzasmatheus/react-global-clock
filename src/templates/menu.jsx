@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchForm from './search'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 const Menu = ({onSearch=f=>f}) => (
     <nav className="navbar navbar-light bg-light">
@@ -9,10 +10,10 @@ const Menu = ({onSearch=f=>f}) => (
 
             <ul className="navbar-nav flex-row mr-md-auto">
                 <li className="nav-item mr-2">
-                    <a className="nav-link" href="/">Home</a>
+                    <Link to="/" className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item mr-2">
-                    <a className="nav-link" href="#/about">About</a>
+                    <Link to="/about" className="nav-link">About</Link>
                 </li>
             </ul>
             

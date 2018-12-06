@@ -1,15 +1,16 @@
 import React from 'react'
 import {Switch, Route, HashRouter} from 'react-router-dom'
 
-import Clock from '../templates/clock'
-import About from '../templates/about'
+import {ClockPage, AboutPage} from '../templates/pageTemplate'
 
-const Routes = ({hour, minute, increment, onToggle}) => (
+const Routes = ({hour, minute, increment, onSearch}) => (
     <HashRouter>
         <Switch>
-            <Route exact path="/" render={() => <Clock hour={hour} minute={minute} 
-            increment={increment}/>}/>
-            <Route path="/about" render={() => <About />} />
+            <Route exact path="/" render={() => <ClockPage onSearch={onSearch}
+                                                hour={hour}
+                                                minute={minute}
+                                                increment={increment}/>}/>
+            <Route path="/about" render={() => <AboutPage onSearch={onSearch}/>} />
         </ Switch>
     </HashRouter>
 )

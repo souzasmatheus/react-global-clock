@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import Routes from './route/routes'
-import Menu from './templates/menu'
 
 class App extends Component {
   constructor() {
@@ -110,16 +109,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Menu onSearch={this.resetLastSearch}/>
-        <div className="container mt-5">
-          <div className="row justify-content-center">
-            <Routes hour={this.state.hour}
-            minute={this.state.minute}
-            increment={this.state.increment}/>
-          </div>
-        </div>        
-      </div>
+      <Routes hour={this.state.hour}
+      minute={this.state.minute}
+      increment={this.state.increment}
+      onSearch={this.resetLastSearch}/>
     );
   }
 }
