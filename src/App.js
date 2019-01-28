@@ -77,7 +77,7 @@ class App extends Component {
 
   getCityTime(city) {
     new Promise((resolves, rejects) => {
-      const api = `https://api.worldweatheronline.com/premium/v1/tz.ashx?key=6bdee2019bc74d3bb34145746182611&q=${city}&format=json`
+      const api = `https://api.worldweatheronline.com/premium/v1/tz.ashx?key=3b29e5a6363a47a1930164006192801&q=${city}&format=json`
       const request = new XMLHttpRequest()
       request.open('GET', api)
       request.onload = () =>
