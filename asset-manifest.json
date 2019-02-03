@@ -1,16 +1,16 @@
 {
   "main.css": "/react-global-clock/static/css/main.14c3d0cb.chunk.css",
-  "main.js": "/react-global-clock/static/js/main.74e884cd.chunk.js",
-  "main.js.map": "/react-global-clock/static/js/main.74e884cd.chunk.js.map",
+  "main.js": "/react-global-clock/static/js/main.26b6a2b0.chunk.js",
+  "main.js.map": "/react-global-clock/static/js/main.26b6a2b0.chunk.js.map",
   "static/css/1.d4fa886f.chunk.css": "/react-global-clock/static/css/1.d4fa886f.chunk.css",
-  "static/js/1.11699c81.chunk.js": "/react-global-clock/static/js/1.11699c81.chunk.js",
-  "static/js/1.11699c81.chunk.js.map": "/react-global-clock/static/js/1.11699c81.chunk.js.map",
+  "static/js/1.a7342f33.chunk.js": "/react-global-clock/static/js/1.a7342f33.chunk.js",
+  "static/js/1.a7342f33.chunk.js.map": "/react-global-clock/static/js/1.a7342f33.chunk.js.map",
   "runtime~main.js": "/react-global-clock/static/js/runtime~main.efbea359.js",
   "runtime~main.js.map": "/react-global-clock/static/js/runtime~main.efbea359.js.map",
-  "static/css/main.14c3d0cb.chunk.css.map": "/react-global-clock/static/css/main.14c3d0cb.chunk.css.map",
-  "static/media/App.css": "/react-global-clock/static/media/digital-7.1e670d88.ttf",
   "static/css/1.d4fa886f.chunk.css.map": "/react-global-clock/static/css/1.d4fa886f.chunk.css.map",
+  "static/media/App.css": "/react-global-clock/static/media/digital-7.1e670d88.ttf",
+  "static/css/main.14c3d0cb.chunk.css.map": "/react-global-clock/static/css/main.14c3d0cb.chunk.css.map",
   "index.html": "/react-global-clock/index.html",
-  "precache-manifest.ae6cd1a00c9e4cc432c9702ef1e8d8f7.js": "/react-global-clock/precache-manifest.ae6cd1a00c9e4cc432c9702ef1e8d8f7.js",
+  "precache-manifest.a7a45e70ee02e646c047da2e84189709.js": "/react-global-clock/precache-manifest.a7a45e70ee02e646c047da2e84189709.js",
   "service-worker.js": "/react-global-clock/service-worker.js"
 }
